@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+	<testsuite tests="2" errors="0" failures="0" time="0.001" timestamp="2016-02-13T23:19:00">
+		<testcase classname="alwaysLooping" name="adds &amp;apos;JavaScript&amp;apos; to the array 5 times if 5 is the parameter" time="0">
+		</testcase>
+		<testcase classname="alwaysLooping" name="adds &amp;apos;JavaScript&amp;apos; to the array one times if the parameter is great than 10" time="0.001">
+		</testcase>
+	</testsuite>
+</testsuites>
+

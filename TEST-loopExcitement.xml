@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+	<testsuite tests="2" errors="0" failures="0" time="0.005" timestamp="2016-02-13T23:19:00">
+		<testcase classname="loopExcitement" name="returns an array of the string &amp;apos;i am looping&amp;apos; 25 times" time="0.002">
+		</testcase>
+		<testcase classname="loopExcitement" name="I am looping should be in the array 25 times" time="0.001">
+		</testcase>
+	</testsuite>
+</testsuites>
+

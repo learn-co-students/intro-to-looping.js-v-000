@@ -1,5 +1,24 @@
 'use strict';
 
+var jasmine = require('jasmine-node');
+var jsdom = require('jsdom');
+var path = require('path');
+describe("Jasmine Walkthrough", function(){
+var loopExcitement, loopingFun, alwaysLooping;
+beforeEach(function(done) {
+ var codeJs = path.resolve(__dirname, '..', 'loops.js');
+ jsdom.env({
+   html: '<div></div>',
+   scripts: [codeJs],
+   onload: function(window) {
+      loopExcitement = window.loopExcitement;
+      loopingFun = window.loopingFun;
+      alwaysLooping = window.alwaysLooping; 
+     done();
+   }
+ });
+});
+
 describe('loopExcitement', function() {
 
   it("returns an array of the string 'i am looping' 25 times", function() {
@@ -16,8 +35,6 @@ describe('loopingFun', function() {
   it("returns the largest number that allows the loop to execute", function() {
     expect(loopingFun()).toEqual(16);
   });
-
-
 });
 
 describe('alwaysLooping', function() {
@@ -26,11 +43,11 @@ describe('alwaysLooping', function() {
     expect(alwaysLooping(5).length).toEqual(5);
     expect(alwaysLooping(5)).toEqual(["JavaScript", "JavaScript", "JavaScript", "JavaScript", "JavaScript"]);
   });
-
   it("adds 'JavaScript' to the array one times if the parameter is great than 10", function() {
     expect(alwaysLooping(12)).toEqual(["JavaScript"]);
     expect(alwaysLooping(12).length).toEqual(1);
   });
 
 
+});
 });

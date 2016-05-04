@@ -14,10 +14,11 @@ function loopingFun(){
 };
 
 function alwaysLooping(num) {
-  if (num<10){
-    var ary = new Array(num).fill("JavaScript");
-    return ary;
-  } else {
-    return ["JavaScript"];
+  var output = [];
+  do {
+    output.push("JavaScript");
+    num--;
   }
+  while (num > 0 && num < 10);
+  return output;
 };
